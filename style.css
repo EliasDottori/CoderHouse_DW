@@ -12,7 +12,7 @@
 }
 
 body{
-    background-color: #1D1D1D;
+    background-color: #1D1D1D!important;
 }
 
 .carga{
@@ -66,7 +66,13 @@ section{
     box-sizing: border-box;
 }
 
+/*------------RESPONSIVE---------*/
 
+@media only screen and (max-width: 600px) {
+    section{
+        width: 95vw;
+    }
+}
 
 /*------------NAVBAR---------------*/
 
@@ -86,6 +92,8 @@ nav{
     width: 60px;
     background-color: #3B3B3B;
     transition: all 0.4s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 nav ul{
@@ -141,6 +149,8 @@ i{
 }
 
 
+
+
 /*------------HOVER - NAV---------------*/
 
 nav ul li:hover{
@@ -174,7 +184,47 @@ nav:hover .name{
     width: 130px;
 }
 
+/*------------RESPONSIVE---------*/
 
+@media only screen and (max-width: 600px) {
+    nav {
+        width : 100vw;
+        height: 100px;
+        z-index: 99;
+    }
+
+    nav ul{
+        width: 100vw;
+        visibility: hidden;
+        opacity: 0;
+        align-items: center;
+    }
+
+    nav:hover{
+        height: 80vh;
+        width: 100%;
+    }
+
+    nav:hover ul{
+        visibility: visible;
+    opacity: 1;
+    }
+
+
+    nav ul li a{
+        font-size: calc(1em + 5vw);
+        text-align: center;
+    }   
+
+    nav:hover .icon{
+        transform: translateX(0);
+    }
+    .name{
+        position: absolute;
+        bottom: 25px;
+        left: 35vw;
+  }
+}
 /*--------------INDEX------------*/
 
 
@@ -272,6 +322,23 @@ nav:hover .name{
 
 }
 
+/*------------RESPONSIVE---------*/
+
+@media only screen and (max-width: 600px) {
+
+    .title1 span, .title2 span{
+        font-size: 23vw;
+    }
+    .titleIndex{
+        font-size: 18vw;
+    }
+    .title3{
+        font-size: 12vw;
+    }
+
+
+}
+
 /*---------------SOBRE MI---------------*/
 
 .containerAbout{
@@ -281,7 +348,7 @@ nav:hover .name{
 }
 
 .containerSpaceAbout{
-    border: 2px solid #000;
+    border: 2px solid #09FDD8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,15 +356,36 @@ nav:hover .name{
     color: #DFDFDF;
     border-radius: 10px;
     background-color: #3B3B3B;
+    width: 80%;
 }
 
-.containerText1 p{
+.containerSpaceAbout p{
     font-weight: bold;
     text-align: center;
 }
 
+.containerSpaceAbout img{
+    width: 75%;
+    height: 75%;
+}
 
 
+
+
+/*------------RESPONSIVE---------*/
+
+@media only screen and (max-width: 600px) {
+    .containerSpaceAbout{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+    .containerSpaceAbout img{
+        width: 50%;
+        height: 50%;
+    }
+    
+}
 
 
 
@@ -418,18 +506,20 @@ nav:hover .name{
     box-sizing: border-box;
     overflow: hidden;
     transition: all 1s ease;
-    animation:  entrada 5s ease;
+    animation:  entrada 2.5s ease;
 }
 
 @keyframes entrada{
     0%{
-        scale: 0;
+        transform: scale (0, 0)  translatey(-800px);
+        
     }
-    75%{
-        scale:1.2;
+    50%{
+        transform: scale (1.2, 1.2)  translatey(-400px);
     }
     100%{
-        scale: 1;
+        
+        transform: scale  (1, 1)  translatey(0px);
     }
 }
 
@@ -446,7 +536,7 @@ nav:hover .name{
 
 @keyframes giroEntrada{
 	100%{
-		transform:rotateY(1080deg);
+		transform:rotateY(720deg);
 	}
 }
 
@@ -460,7 +550,7 @@ nav:hover .name{
 
 .cuboContainer {
     transform-style: preserve-3d;
-    animation: giro 10s  5s linear infinite, giroEntrada 5s linear 1;
+    animation: giro 10s  2.5s linear infinite, giroEntrada 2.5s ease-in-out 1;
     
 }
 /*------------POSICIONAMIENTO VERTICE-----------*/
@@ -521,8 +611,22 @@ nav:hover .name{
 
 
 
+/*------------RESPONSIVE---------*/
 
+@media only screen and (max-width: 600px) {
 
+    .containerSkills{
+        display: grid;
+        grid-template-columns: 95%;
+        grid-template-rows: 20% 40% 18% 18%;
+        height: 150vh;
+        padding-top: 150px;
+        grid-gap: 1%;
+    }
+    .containerTextSkills{
+        font-size: 1em;
+    }
+}
 
 
 /*------------------PORTFOLIO--------------------*/
@@ -544,7 +648,7 @@ nav:hover .name{
     font-size: 3vw;
 }
 
-/*SPACE*/
+/*CONTENEDOR GENERAL*/
 
 .containerSpace{
     display: flex;
@@ -595,7 +699,7 @@ nav:hover .name{
     animation-delay: 0.8s;
 }
 
-/*CONTENIDO*/
+/**/
 
 .content{
     display: flex;
@@ -639,11 +743,8 @@ nav:hover .name{
     width: 100%;
     height: 45%;
     opacity: 0;
-    box-sizing: border-box;
-    overflow: hidden;
     z-index: 5;
-    
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .buttonGo{
@@ -795,66 +896,90 @@ nav:hover .name{
 }
 
 
+
+/*------------RESPONSIVE---------*/
+
+@media only screen and (max-width: 600px) {
+    .containerSpace{
+        display: grid;
+        grid-template-columns: 47% 47%;
+        grid-gap: 3%;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .techContent i{
+        font-size: 10vw;
+    }
+
+    .titleSpace h1{
+        font-size: calc(1em + 1vw);
+    }
+
+    .dataSpace{
+        font-size: calc(0.5em + 1vw);
+    }
+}
+
 /*-----------------CONTACTO----------------------*/
 
 .sectionContact{
     display: flex;
-    justify-content: 100%;
+    justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.sectionContact form{
-    width: 100%;
-    padding: 10px;
-    background-color: #3B3B3B;
-    border-radius: 10px;
-    border: 3px solid #09FDD8;
-    padding: 30px;
-}
-
-.contentButton{
+.contact-form{
     display: flex;
-    justify-content: right;
-    width: 100%;
-}
-
-
-.contactContent{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-direction: column;
-    box-sizing: border-box;
-}
-
-.contactContent li{
-    width: 100%;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    height: 55%;
 }
 
-.contactContent label{
-    color: #DFDFDF;
+.contact-form .form-control{
+    border-radius:1rem;
+}
+
+.contact-image{
+    
+    text-align: center;
+}
+
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+}
+
+
+.contact-form h3{
+    text-align: center;
+    font-size: 3.5vw;
     font-weight: bold;
-    font-size: 1.2em;
-
+    color: #09FDD8;
+    font-family: 'Comfortaa', cursive;
 }
 
-.contactContent li input{
-    width: 70%;
-    height: 35px;
-    border-radius: 10px;
-    border: 2px solid black;
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
 }
 
-.contactContent li textarea{
-    width: 70%;
-    height: 100px;
-    border-radius: 10px;
-    border: 2px solid black;
+.btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
 }
-
