@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Elias Dottori</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="https://kit.fontawesome.com/c11d26c693.js" crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://kit.fontawesome.com/c11d26c693.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="carga">
@@ -14,7 +16,7 @@
     </div>
     
         <nav>
-            <a href="../index.html"><div class="icon"></div></a>
+            <a ><div class="icon"></div></a>
             <ul>
                 <li>
                     <a href="../index.html">
@@ -50,25 +52,35 @@
             <p class="name">Elías Dottori</p>
         </nav>
         <section class="sectionContact">
-            <form action="" method="post">
-                <ul class="contactContent">
-                 <li>
-                   <label for="name">Nombre</label>
-                   <input type="text" id="name" name="user_name">
-                 </li>
-                 <li>
-                   <label for="mail">Correo electrónico</label>
-                   <input type="email" id="mail" name="user_mail">
-                 </li>
-                 <li>
-                   <label for="msg">Mensaje</label>
-                   <textarea id="msg" name="user_message"></textarea>
-                 </li>
-                </ul>
-                <div class="contentButton">
-                <button >Enviar</button>
-                </div>
-               </form>
+            <div class="container contact-form">
+                <div class="contact-image">
+                    <img src="../public/images/icon.png" alt="rocket_contact"/>
+                </div> 
+                <h3>Contactame!</h3>
+                <form method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="txtName" class="form-control" placeholder="Nombre" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="txtEmail" class="form-control" placeholder="Correo Electronico" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="txtText" class="form-control" placeholder="Tema" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input name="btnSubmit" class="btnContact" value="Enviar Mensaje!" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea name="txtMsg" class="form-control" placeholder="Escribe tu Mensaje" style="width: 100%; height: 150px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
 </body>
 </html>
