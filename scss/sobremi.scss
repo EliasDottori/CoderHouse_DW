@@ -1,0 +1,56 @@
+
+/*---------------SOBRE MI---------------*/
+
+.containerAbout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSpaceAbout{
+    border: 2px solid #09FDD8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #DFDFDF;
+    border-radius: 10px;
+    background-color: #3B3B3B;
+    width: 80%;
+}
+
+.containerSpaceAbout p{
+    font-weight: bold;
+    text-align: center;
+}
+
+.containerSpaceAbout img{
+    width: 75%;
+    height: 75%;
+}
+
+
+
+
+/*------------RESPONSIVE---------*/
+
+@media only screen and (max-width: 600px) {
+    .containerSpaceAbout{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 65vh;
+    }
+    .containerSpaceAbout img{
+        width: 50%;
+        height: 40%;
+    }
+    
+}
+
+
+
+
+
+
+

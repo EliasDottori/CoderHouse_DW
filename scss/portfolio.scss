@@ -1,0 +1,326 @@
+
+/*------------------PORTFOLIO--------------------*/
+.containerWork{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 17vh;
+    animation-fill-mode: both;
+    animation-name: h1-Opacity;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    opacity: 0;
+}
+
+.containerWork h1{
+    color: #09FDD8;
+    font-size: 3vw;
+}
+
+/*CONTENEDOR GENERAL*/
+
+.containerSpace{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2vw;
+    
+}
+
+.space{
+    width: 100%;
+    height: 450px;
+    background-color: #3B3B3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.6s ease 0.3s;
+    transform: translatey(-1500px);
+    animation-fill-mode: both;
+    animation-name: bajada;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    box-shadow: 8px 8px 21px -4px rgba(0,0,0,0.84);
+    -webkit-box-shadow: 8px 8px 21px -4px rgba(0,0,0,0.84);
+    -moz-box-shadow: 8px 8px 21px -4px rgba(0,0,0,0.84);
+    border-radius: 5px;
+    border: 2px solid black;
+    z-index: 3;
+    
+}
+
+.space-got{
+    animation-delay: 0.2s;
+}
+
+.space-igourmet{
+    animation-delay: 0.4s;
+}
+
+.space-3{
+    animation-delay: 0.6s;
+}
+
+.space-4{
+    animation-delay: 0.8s;
+}
+
+/**/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 4;
+    transition: border 0.8s ease 0.5s;
+}
+
+@keyframes h1-Opacity {
+    0% {
+       opacity: 0;
+    }
+    100%{
+       opacity: 1;
+    }
+
+}
+
+@keyframes bajada {
+    0% {
+       transform: translatey(-1000px);
+    }
+    100%{
+        transform: translatey(0px);
+    }
+
+}
+
+/*BOTON*/
+
+.spaceButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+    z-index: 5;
+    transition: backdrop-filter 0.5s ease;
+}
+
+.buttonGo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+
+    z-index: 10;
+    text-align: center;
+    color: #DFDFDF;
+    background-color: #3B3B3B;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+
+    border: 2px solid #DFDFDF;
+    border-radius: 100px;
+
+    visibility: 0;
+    opacity: 0;
+
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    box-shadow: 8px 8px 21px -4px rgba(0,0,0,0.84);
+    -webkit-box-shadow: 8px 8px 21px -4px rgba(0,0,0,0.84);
+    -moz-box-shadow: 8px 8px 21px -4px rgba(0,0,0,0.84);
+}
+
+.buttonGo:hover{
+    background-color: #5b5b5b;
+}
+
+.buttonGo:active{
+    width: 59%;
+    height: 59%;
+}
+
+.spaceButton:hover{
+    backdrop-filter: blur(5px);
+}
+
+.spaceButton:hover .buttonGo{
+    opacity: 1;
+    visibility: 1;
+    backdrop-filter: blur(5px);
+}
+
+/*DETALLE*/
+
+.info{
+    width: 100%;
+    height: 8%;
+    background-color: #DFDFDF;
+    transition: height 0.5s ease ;
+    box-sizing: border-box;
+}
+
+.titleSpace{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.titleSpace h1{
+    font-size: calc(0.5em + 1vw);
+}
+
+.techSpace{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+    padding: 15px;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.techContent{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.techContent i{
+    font-size: 3vw;
+    text-align: center;
+}
+
+.dataSpace{
+    opacity: 0;
+    visibility: hidden;
+    padding: 1em;
+    font-size: calc(0.1em + 0.75vw);
+}
+
+.got{
+    background-image: url(../public/images/portfolio/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.igourmet{
+    background-image: url(../public/images/portfolio/igourmet.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portfolio{
+    background-image: url(../public/images/portfolio/portfolio.jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.pregunta{
+    background-image: url(../public/images/portfolio/pregunta.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+.space:hover{
+    scale: 105%;
+    background-color: #09FDD8;
+    height: 75vh;
+}
+
+.space:hover .content{
+    border: 2px solid black;
+}
+
+.space:hover .info{
+    height: 55%;
+}
+
+
+.space:hover .tech1{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease 1s;
+}
+
+.space:hover .tech2{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s ease 1.5s;
+}
+
+.space:hover .tech3{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s ease 2s;
+}
+
+.space:hover .dataSpace{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease 0.4s;
+}
+
+
+
+/*------------RESPONSIVE---------*/
+
+@media only screen and (max-width: 600px) {
+    .containerSpace{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .techContent i{
+        font-size: 10vw;
+    }
+
+    .titleSpace h1{
+        font-size: calc(1em + 1vw);
+    }
+
+    .dataSpace{
+        font-size: calc(0.5em + 1vw);
+    }
+
+    .space{
+        height: 50vh;
+        width: 80vw;
+    } 
+
+    .space:hover .info{
+        height: 75%;
+    }
+    
+}
