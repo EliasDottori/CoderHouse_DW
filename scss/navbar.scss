@@ -1,0 +1,182 @@
+
+/*------------NAVBAR---------------*/
+
+.icon{
+    background-image: url(../public/images/icon.png);
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    margin-top: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+nav{
+    position: absolute;
+    height: 100vh;
+    width: 60px;
+    background-color: #3B3B3B;
+    transition: all 0.4s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    width: auto;
+}
+
+
+ 
+
+nav ul a{
+    font-size: calc(0.7em + 0.5vw);
+    color: #09FDD8;
+    text-decoration: none!important;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+    transition: all 0.05s ease-in-out;
+}
+
+nav ul a span{
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 20px;
+    width: auto;
+    white-space: nowrap;
+    color: #DFDFDF;
+}
+
+i{
+    transition: all 0.8s ease-in-out;
+}
+
+.name{
+    font-size: 20px;
+    color: #dfdfdf;
+    font-family: 'Comfortaa', cursive;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    transition: all 0.5s ease-in-out;
+    white-space: nowrap;
+    width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+
+/*------------HOVER - NAV---------------*/
+
+nav ul a:hover{
+    background-color: #5c5c5c;
+}
+
+nav ul a:hover i{
+    color: #dfdfdf;
+}
+
+nav ul a:hover span{
+    color: #09FDD8;
+}
+
+nav:hover .icon{
+    transform: translateX(55px);
+}
+
+nav:hover{
+    width: 190px;
+}
+
+nav:hover a span{
+    visibility: visible;
+    opacity: 1;
+    
+    transition: all 0.8s ease-in-out 0.15s;
+}
+
+nav:hover .name{
+    width: 130px;
+}
+
+.buttonMenu{
+    display: none;
+
+}
+
+/*------------RESPONSIVE---------*/
+
+@media only screen and (max-width: 600px) {
+    nav {
+        width : 100vw;
+        height: 80px;
+        z-index: 99;
+    }
+
+    .logoContainer{
+        position: absolute;
+        
+    }
+
+    nav ul{
+        width: 100vw;
+        visibility: hidden;
+        opacity: 0;
+        align-items: center;
+        justify-content: space-around;
+        height: 90%;
+    }
+
+    nav:hover{
+        height: 75vh;
+        width: 100%;
+    }
+
+    nav:hover ul{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .buttonMenu{
+        height: 80px;
+        width: 80px;
+        z-index: 100;
+        right: 0px;
+        top: 0px;
+        position: absolute;
+        font-size: 370%;
+        text-align: center;
+        display: block;
+        pointer-events: none;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    nav ul a{
+        font-size: calc(1em + 5vw);
+        text-align: center;
+        padding: 0.5em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }   
+
+    nav:hover .icon{
+        transform: translateX(0);
+    }
+    .name{
+        position: absolute;
+        bottom: 25px;
+        left: 35vw;
+  }
+}
