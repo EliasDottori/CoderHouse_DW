@@ -1,3 +1,5 @@
+@import "globals.scss";
+
 
 /*------------NAVBAR---------------*/
 
@@ -122,6 +124,11 @@ nav:hover .name{
         z-index: 99;
     }
 
+    nav:hover{
+        width: auto;
+    }
+
+
     .logoContainer{
         position: absolute;
         
@@ -136,12 +143,12 @@ nav:hover .name{
         height: 90%;
     }
 
-    nav:hover{
+    .navResponsive{
         height: 75vh;
         width: 100%;
     }
 
-    nav:hover ul{
+    .navUlResponsive{
         visibility: visible;
         opacity: 1;
     }
@@ -149,16 +156,16 @@ nav:hover .name{
     .buttonMenu{
         height: 80px;
         width: 80px;
-        z-index: 100;
+        z-index: 10000;
         right: 0px;
         top: 0px;
         position: absolute;
         font-size: 370%;
         text-align: center;
         display: block;
-        pointer-events: none;
         box-sizing: border-box;
         overflow: hidden;
+
     }
 
     nav ul a{
@@ -171,9 +178,6 @@ nav:hover .name{
         justify-content: center;
     }   
 
-    nav:hover .icon{
-        transform: translateX(0);
-    }
     .name{
         position: absolute;
         bottom: 25px;
