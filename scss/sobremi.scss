@@ -1,10 +1,9 @@
+@import "globals.scss";
 
 /*---------------SOBRE MI---------------*/
 
 .containerAbout{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 }
 
 .containerSpaceAbout{

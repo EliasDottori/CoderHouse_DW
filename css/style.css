@@ -86,7 +86,8 @@
   background-size: contain;
   background-position: center;
   margin-top: 20px;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  cursor: pointer; }
 
 nav {
   position: absolute;
@@ -174,6 +175,9 @@ nav:hover .name {
     height: 80px;
     z-index: 99; }
 
+  nav:hover {
+    width: auto; }
+
   .logoContainer {
     position: absolute; }
 
@@ -185,25 +189,24 @@ nav:hover .name {
     justify-content: space-around;
     height: 90%; }
 
-  nav:hover {
+  .navResponsive {
     height: 75vh;
     width: 100%; }
 
-  nav:hover ul {
+  .navUlResponsive {
     visibility: visible;
     opacity: 1; }
 
   .buttonMenu {
     height: 80px;
     width: 80px;
-    z-index: 100;
+    z-index: 10000;
     right: 0px;
     top: 0px;
     position: absolute;
     font-size: 370%;
     text-align: center;
     display: block;
-    pointer-events: none;
     box-sizing: border-box;
     overflow: hidden; }
 
@@ -215,9 +218,6 @@ nav:hover .name {
     display: flex;
     align-items: center;
     justify-content: center; }
-
-  nav:hover .icon {
-    transform: translateX(0); }
 
   .name {
     position: absolute;
@@ -579,10 +579,10 @@ nav:hover .name {
 .space-igourmet {
   animation-delay: 0.4s; }
 
-.space-3 {
+.space-portfolio {
   animation-delay: 0.6s; }
 
-.space-4 {
+.space-trabajo {
   animation-delay: 0.8s; }
 
 /**/
