@@ -86,7 +86,8 @@
   background-size: contain;
   background-position: center;
   margin-top: 20px;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  cursor: pointer; }
 
 nav {
   position: absolute;
