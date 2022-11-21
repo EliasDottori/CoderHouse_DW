@@ -5,7 +5,7 @@
 @import "habilidades.scss";
 @import "portfolio.scss";
 @import "contacto.scss";
-
+@import "globals.scss";
 
 $dark: #1D1D1D;
 $light: #5c5c5c;
@@ -35,9 +35,7 @@ body{
     animation-delay: 0.2s;
     animation-timing-function: ease;
     opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     z-index: 1001;
 }
 
