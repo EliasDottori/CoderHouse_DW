@@ -31,12 +31,13 @@
 
 .space{
     width: 100%;
-    height: 450px;
+    max-height: 750px;
+    min-height: 450px;
+    height: 70vh;
     background-color: #3B3B3B;
     @include flex-center;
     padding: 10px;
     transition: all 0.6s ease 0.3s;
-    transform: translatey(-1500px);
     animation-fill-mode: both;
     animation-name: bajada;
     animation-duration: 1s;
@@ -83,7 +84,7 @@ $segundos:
     overflow: hidden;
     border-radius: 5px;
     z-index: 4;
-    transition: border 0.8s ease 0.5s;
+    transition: border 0.8s ease;
 }
 
 @keyframes h1-Opacity {
@@ -110,6 +111,8 @@ $segundos:
 
 .spaceButton{
     @include flex-center;
+    flex-direction: column;
+    gap: 50px;
     width: 100%;
     height: 45%;
     z-index: 5;
@@ -119,19 +122,19 @@ $segundos:
 .buttonGo{
     @include flex-center;
 
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 80px;
 
     z-index: 10;
     text-align: center;
     color: #DFDFDF;
     background-color: #3B3B3B;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: none;
 
     border: 2px solid #DFDFDF;
-    border-radius: 100px;
+    border-radius: 10px 10px  10px 10px;
 
     visibility: 0;
     opacity: 0;
@@ -148,8 +151,7 @@ $segundos:
 }
 
 .buttonGo:active{
-    width: 59%;
-    height: 59%;
+    scale:0.95;
 }
 
 .spaceButton:hover{
@@ -159,8 +161,11 @@ $segundos:
 .spaceButton:hover .buttonGo{
     opacity: 1;
     visibility: 1;
-    backdrop-filter: blur(5px);
+    transition: all 0.5s linear 0.5s;
 }
+
+
+
 
 /*DETALLE*/
 
@@ -248,9 +253,8 @@ $segundos:
 
 
 .space:hover{
-    scale: 105%;
     background-color: #09FDD8;
-    height: 75vh;
+    scale: 1.05;
 }
 
 .space:hover .content{
@@ -281,9 +285,10 @@ $segundos:
 }
 
 .space:hover .dataSpace{
+    transition: all 0.4s ease ;
     opacity: 1;
     visibility: visible;
-    transition: all 0.4s ease 0.4s;
+    
 }
 
 
@@ -298,13 +303,27 @@ $segundos:
         width: 100%;
         gap: 20px;
     }
+    .spaceButton{
+        gap: 20px;
+    }
+
+    .buttonGo{
+        height: 50px;
+        width: 100px;
+        font-size: 1em;
+    }
+    .containerWork{
+        h1{
+            font-size: 3rem;
+        }
+    }
 
     .techContent i{
-        font-size: 10vw;
+        font-size: 3rem;
     }
 
     .titleSpace h1{
-        font-size: calc(1em + 1vw);
+        font-size: 1.5rem;
     }
 
     .dataSpace{
@@ -320,4 +339,13 @@ $segundos:
         height: 75%;
     }
     
+    @keyframes bajada {
+        0% {
+           transform: translatex(-1000px);
+        }
+        100%{
+            transform: translatex(0px);
+        }
+    
+    }
 }

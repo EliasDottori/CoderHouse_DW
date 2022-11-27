@@ -3,7 +3,35 @@
 /*---------------SOBRE MI---------------*/
 
 .containerAbout{
-    @include flex-center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aboutTitle{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title1{
+        font-size: 3vw;
+        color: #09FDD8;
+        text-align: center;
+    }
+    .title2{
+        font-size: 3vw;
+        color: #09FDD8;
+        text-align: center;
+    }
+    .title3bis{
+        font-size: 2vw;
+        color: #09FDD8;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .containerSpaceAbout{
@@ -24,8 +52,49 @@
 }
 
 .containerSpaceAbout img{
-    width: 75%;
-    height: 75%;
+    width: 300px;
+    height: 300px;
+}
+
+.xpContainer{
+    width: 40%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bis{
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.xpSpace{
+    border: 2px solid #09FDD8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    color: #DFDFDF;
+    border-radius: 10px;
+    background-color: #3B3B3B;
+    width: 80%;
+    h2 {
+        text-align: start;
+        color: #09FDD8;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .xpContent{
+        font-weight: bold;
+        
+    }
+}
+
+.spaceBis{
+    width: 27%;
 }
 
 
@@ -41,10 +110,30 @@
         height: 65vh;
     }
     .containerSpaceAbout img{
-        width: 50%;
-        height: 40%;
+        width: 200px;
+        height: 200px;
     }
-    
+    .xpContainer{
+        width: 90%;
+    }
+    .aboutTitle{
+        .title1{
+            font-size: 13vw;
+        }
+        .title2{
+            font-size:13vw;
+        }
+        .title3bis{
+            font-size: 8vw;
+        }
+    }
+    .titleResponsive{
+        padding-top: 65px;
+    }
+    .spaceBis{
+        width: 90%;
+    }
+
 }
 
 

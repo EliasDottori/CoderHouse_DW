@@ -15,7 +15,7 @@
 }
 
 nav{
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 60px;
     background-color: #3B3B3B;
@@ -160,7 +160,7 @@ nav:hover .name{
         z-index: 10000;
         right: 0px;
         top: 0px;
-        position: absolute;
+        position: fixed;
         font-size: 370%;
         text-align: center;
         display: block;
@@ -183,5 +183,11 @@ nav:hover .name{
         position: absolute;
         bottom: 25px;
         left: 35vw;
-  }
+    }
+    nav:hover .icon{
+        transform: unset;
+    }
+    .nameResponsive{
+        width: 130px;
+    }
 }
