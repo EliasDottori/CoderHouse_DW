@@ -94,8 +94,8 @@ section{
 }
 
 .separator{
-    width: 100%;
-    height: 30px;
+    width: 0;
+    height: 0;
 }
 /*------------RESPONSIVE--------*/
 
@@ -103,5 +103,9 @@ section{
     section{
         min-width: unset;
         max-width: unset;
+    }
+    .separator{
+        width: 100%;
+    height: 30px;
     }
 }
