@@ -17,6 +17,22 @@ $light: #5c5c5c;
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scrollbar-width: auto;
+    scrollbar-color: #09fdd8 #3b3b3b;
+}
+
+*::-webkit-scrollbar {
+width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+background: #3b3b3b;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #09fdd8;
+border-radius: 10px;
+border: 3px solid #ffffff;
 }
 
 body{
@@ -24,7 +40,7 @@ body{
 }
 
 .carga{
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     background-color: $dark;
@@ -32,7 +48,7 @@ body{
     animation-fill-mode: both;
     animation-name: cargaOpacity;
     animation-duration: 1s;
-    animation-delay: 0.2s;
+    animation-delay: 0.7s;
     animation-timing-function: ease;
     opacity: 1;
     @include flex-center;
@@ -72,7 +88,7 @@ section{
     width: 90vw;
     min-width: 1200px;
     max-width: 1400px;
-    height: 100vh;
+    height: auto;
     margin: auto auto;
     box-sizing: border-box;
 }
