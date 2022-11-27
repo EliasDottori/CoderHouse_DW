@@ -1014,6 +1014,10 @@ section {
   margin: auto auto;
   box-sizing: border-box; }
 
+.separator {
+  width: 100%;
+  height: 30px; }
+
 /*------------RESPONSIVE--------*/
 @media only screen and (max-width: 600px) {
   section {
